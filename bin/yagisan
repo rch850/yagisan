@@ -1,0 +1,59 @@
+#!/usr/bin/env node
+
+"use strict";
+
+var program = require("commander"),
+    pkg = require("../package.json"),
+    request = require("request"),
+    crypto = require("crypto"),
+    MailParser = require("mailparser").MailParser,
+    mailparser = new MailParser();
+
+program
+  .version(pkg.version)
+  .option("-k, --key <key>", "encryption key (required)")
+  .option("-d, --dest <url>", "url to post")
+  .parse(process.argv);
+
+if (!program.key) {
+  program.help();
+}
+
+function randomBase64(len) {
+  return new Buffer(crypto.randomBytes(len)).toString("base64");
+}
+
+function mailgunHash(timestamp, token) {
+  var hmac = crypto.createHmac("sha256", program.key);
+  hmac.update(timestamp + token);
+  return hmac.digest("hex");
+}
+
+mailparser.on("end", function(mail) {
+  var formData = {
+    from: mail.headers.from,
+    subject: mail.subject,
+    "body-plain": mail.text
+  };
+  formData.timestamp = (new Date()).getTime();
+  formData.token     = randomBase64(50);
+  formData.signature = mailgunHash(formData.timestamp, formData.token);
+
+  if (program.dest) {
+    request.post({
+      uri: program.dest,
+      form: formData
+    }, function() {
+      console.log("OK");
+    });
+  } else {
+    console.log(formData);
+  }
+});
+
+process.stdin.on("data", function(chunk) {
+  mailparser.write(chunk);
+});
+process.stdin.on("end", function() {
+  mailparser.end();
+});

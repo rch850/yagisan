@@ -1,0 +1,20 @@
+{
+  "name": "yagisan",
+  "version": "0.1.0",
+  "description": "Yagisan forwards emails like mailgun.",
+  "author": "rich850@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rch850/yagisan.git"
+  },
+  "license": "MIT",
+  "bin": {
+    "yagisan": "bin/yagisan"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "mailparser": "~0.3.6",
+    "request": "~2.27.0",
+    "commander": "~2.1.0"
+  }
+}

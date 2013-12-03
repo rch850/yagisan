@@ -1,0 +1,25 @@
+From "test...8lo.ol8"@docomo.ne.jp  Tue Dec  3 02:51:36 2013
+Return-Path: <"test...8lo.ol8"@docomo.ne.jp>
+X-Original-To: test@example.com
+Delivered-To: test@example.com
+Received: from docomo.ne.jp (mail102.docomo.ne.jp [203.138.203.2])
+        by example.com (Postfix) with ESMTP id 64CFF206AC
+        for <test@example.com>; Tue,  3 Dec 2013 02:51:36 +0000 (UTC)
+Received: from docomo.ne.jp ([10.241.96.129])
+ by mfsmax.docomo.ne.jp(DOCOMO Mail Server Ver2.0) with SMTP id 03e800695293ae6513cf
+ for <test@example.com>; Tue, 03 Dec 2013 11:51:35 +0900 (JST)
+X-Mail-Type: deco
+X-Mailer: DOCOMO spmode mail ver.6800
+X-DCMMail: spmode
+Date: Tue, 03 Dec 2013 11:51:32 +0900
+From: <test...8lo.ol8@docomo.ne.jp>
+To: <test@example.com>
+Subject: fooo
+Message-ID: <xxxxxxxxxxxxxxxx.1380000000000@docomo.ne.jp>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="iso-2022-jp"
+Content-Transfer-Encoding: 7bit
+
+test
+
+todo test japanese
