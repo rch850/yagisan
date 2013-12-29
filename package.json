@@ -11,10 +11,16 @@
   "bin": {
     "yagisan": "bin/yagisan"
   },
+  "scripts": {
+    "test": "mocha"
+  },
   "preferGlobal": true,
   "dependencies": {
     "mailparser": "~0.3.6",
     "request": "~2.27.0",
     "commander": "~2.1.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.16.2"
   }
 }
