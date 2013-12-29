@@ -1,6 +1,8 @@
 # yagisan
 > Yagisan forwards emails like mailgun.
 
+[![Build Status](https://travis-ci.org/rch850/yagisan.png?branch=develop)](https://travis-ci.org/rch850/yagisan)
+
 Yagisan can:
 
   - forward emails like mailgun.
