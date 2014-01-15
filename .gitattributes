@@ -1,0 +1,2 @@
+# This prevent from breaking eol of bin/yagisan on Windows.
+*    eol=lf
