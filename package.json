@@ -1,6 +1,6 @@
 {
   "name": "yagisan",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Yagisan forwards emails like mailgun.",
   "author": "rich850@gmail.com",
   "repository": {
