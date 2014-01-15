@@ -1,7 +1,9 @@
 # yagisan
 > Yagisan forwards emails like mailgun.
 
+[![NPM version](https://badge.fury.io/js/yagisan.png)](http://badge.fury.io/js/yagisan)
 [![Build Status](https://travis-ci.org/rch850/yagisan.png?branch=master)](https://travis-ci.org/rch850/yagisan)
+[![Code Climate](https://codeclimate.com/github/rch850/yagisan.png)](https://codeclimate.com/github/rch850/yagisan)
 
 Yagisan can:
 
